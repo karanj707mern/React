@@ -1,0 +1,28 @@
+{
+    "folder-color.pathColors": [
+        {
+            "folderPath": "React\\react-frontend\\",
+            "color": "foldercolorizer.color_00ccff"
+        },
+        {
+            "folderPath": "React\\Backend\\",
+            "color": "foldercolorizer.color_cccc00"
+        },
+        {
+            "folderPath": "React\\react-frontend\\src\\Component\\",
+            "color": "foldercolorizer.color_cc00ff"
+        },
+        {
+            "folderPath": "React\\Backend\\Routes\\",
+            "color": "foldercolorizer.color_0000ff"
+        },
+        {
+            "folderPath": "React\\Backend\\Model\\",
+            "color": "foldercolorizer.color_00cc99"
+        },
+        {
+            "folderPath": "React\\Backend\\Controllers\\",
+            "color": "foldercolorizer.color_33cc00"
+        }
+    ]
+}
