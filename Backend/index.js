@@ -1,6 +1,11 @@
 var express = require('express')
 var cors = require('cors')
-var app = express()
+var app = express();
+// Add CSP header middleware
+// app.use(function(req, res, next) {
+//   res.setHeader("Content-Security-Policy", "default-src 'self' http://localhost:5000");
+//   next();
+// });
 const path = require('path')
  var catRoutes = require('./Routes/catRoutes')
  var prRoutes = require("./Routes/prRoutes")

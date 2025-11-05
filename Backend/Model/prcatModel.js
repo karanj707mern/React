@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/nodejs')
-  .then(() => console.log('Connected!'));
+require('dotenv').config();
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('Connected!'))
+  .catch(err => console.error('Connection error', err));
     const Schema = mongoose.Schema;
     const prSchema = new Schema({
     catid: {
@@ -13,4 +15,4 @@ mongoose.connect('mongodb://127.0.0.1:27017/nodejs')
     discount:Number
     });
 const prcatModel = mongoose.model('product', prSchema);
-module.exports = prcatModel
+module.exports = prcatModel;
