@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Single Product</title>
@@ -21,13 +21,13 @@
 
 <div class="super_container">
 
-	<!-- Header -->
+	Header
 
 	<header class="header trans_300">
 
 		<!-- Top Navigation -->
 
-		<div class="top_nav">
+		<!-- <div class="top_nav">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
@@ -39,11 +39,11 @@
 
 								<!-- Currency / Language / My Account -->
 
-								<li class="currency">
+								<!-- <li class="currency">
 									<a href="#">
 										usd
-										<i class="fa fa-angle-down"></i>
-									</a>
+										<i class="fa fa-angle-down"></i> -->
+									<!-- </a>
 									<ul class="currency_selection">
 										<li><a href="#">cad</a></li>
 										<li><a href="#">aud</a></li>
@@ -62,8 +62,8 @@
 										<li><a href="#">German</a></li>
 										<li><a href="#">Spanish</a></li>
 									</ul>
-								</li>
-								<li class="account">
+								</li> -->
+								<!-- <li class="account">
 									<a href="#">
 										My Account
 										<i class="fa fa-angle-down"></i>
@@ -78,11 +78,11 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>  -->
 
 		<!-- Main Navigation -->
 
-		<div class="main_nav_container">
+		<!-- <div class="main_nav_container">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 text-right">
@@ -119,11 +119,11 @@
 
 	</header>
 
-	<div class="fs_menu_overlay"></div>
+	<div class="fs_menu_overlay"></div> -->
 
 	<!-- Hamburger Menu -->
 
-	<div class="hamburger_menu">
+	<!-- <div class="hamburger_menu">
 		<div class="hamburger_close"><i class="fa fa-times" aria-hidden="true"></i></div>
 		<div class="hamburger_menu_content text-right">
 			<ul class="menu_top_nav">
@@ -169,15 +169,15 @@
 				<li class="menu_item"><a href="#">contact</a></li>
 			</ul>
 		</div>
-	</div>
+	</div> -->
 
-	<div class="container single_product_container">
+	<!-- <div class="container single_product_container">
 		<div class="row">
 			<div class="col">
 
 				<!-- Breadcrumbs -->
 
-				<div class="breadcrumbs d-flex flex-row align-items-center">
+				<!-- <div class="breadcrumbs d-flex flex-row align-items-center">
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="categories.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Men's</a></li>
@@ -194,8 +194,8 @@
 					<div class="row">
 						<div class="col-lg-3 thumbnails_col order-lg-1 order-2">
 							<div class="single_product_thumbnails">
-								<ul>
-									<li><img src="images/single_1_thumb.jpg" alt="" data-image="images/single_1.jpg"></li>
+								<ul> -->
+									<!-- <li><img src="images/single_1_thumb.jpg" alt="" data-image="images/single_1.jpg"></li>
 									<li class="active"><img src="images/single_2_thumb.jpg" alt="" data-image="images/single_2.jpg"></li>
 									<li><img src="images/single_3_thumb.jpg" alt="" data-image="images/single_3.jpg"></li>
 								</ul>
@@ -207,8 +207,8 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
+				</div> -->
+			<!-- </div>
 			<div class="col-lg-5">
 				<div class="product_details">
 					<div class="product_details_title">
@@ -223,8 +223,8 @@
 					<ul class="star_rating">
 						<li><i class="fa fa-star" aria-hidden="true"></i></li>
 						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa fa-star" aria-hidden="true"></i></li>
+						<li><i class="fa fa-star" aria-hidden="true"></i></li> -->
+						<!-- <li><i class="fa fa-star" aria-hidden="true"></i></li>
 						<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
 					</ul>
 					<div class="product_color">
@@ -235,8 +235,8 @@
 							<li style="background: #60b3f3"></li>
 						</ul>
 					</div>
-					<div class="quantity d-flex flex-column flex-sm-row align-items-sm-center">
-						<span>Quantity:</span>
+					<div class="quantity d-flex flex-column flex-sm-row align-items-sm-center"> -->
+						<!-- <span>Quantity:</span>
 						<div class="quantity_selector">
 							<span class="minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
 							<span id="quantity_value">1</span>
@@ -249,11 +249,11 @@
 			</div>
 		</div>
 
-	</div>
+	</div> --> -->
 
 	<!-- Tabs -->
 
-	<div class="tabs_section_container">
+	<!-- <div class="tabs_section_container">
 
 		<div class="container">
 			<div class="row">
@@ -271,7 +271,7 @@
 				<div class="col">
 
 					<!-- Tab Description -->
-
+<!-- 
 					<div id="tab_1" class="tab_container active">
 						<div class="row">
 							<div class="col-lg-5 desc_col">
@@ -303,11 +303,11 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<!-- Tab Additional Info -->
 
-					<div id="tab_2" class="tab_container">
+					<!-- <div id="tab_2" class="tab_container">
 						<div class="row">
 							<div class="col additional_info_col">
 								<div class="tab_title additional_info_title">
@@ -317,23 +317,45 @@
 								<p>SIZE:<span>L,M,XL</span></p>
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<!-- Tab Reviews -->
 
-					<div id="tab_3" class="tab_container">
-						<div class="row">
+					<!-- <div id="tab_3" class="tab_container">
+						<div class="row"> -->
 
 							<!-- User Reviews -->
 
-							<div class="col-lg-6 reviews_col">
+							<!-- <div class="col-lg-6 reviews_col">
 								<div class="tab_title reviews_title">
 									<h4>Reviews (2)</h4>
-								</div>
+								</div> -->
 
 								<!-- User Review -->
 
-								<div class="user_review_container d-flex flex-column flex-sm-row">
+								<!-- <div class="user_review_container d-flex flex-column flex-sm-row">
+									<div class="user">
+										<div class="user_pic"></div>
+										<div class="user_rating">
+											<ul class="star_rating">
+												<li><i class="fa fa-star" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+											</ul>
+										</div>
+									</div>
+									<div class="review">
+										<div class="review_date">27 Aug 2016</div>
+										<div class="user_name">Brandon William</div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+									</div>
+								</div> -->
+
+								<!-- User Review -->
+
+								<!-- <div class="user_review_container d-flex flex-column flex-sm-row">
 									<div class="user">
 										<div class="user_pic"></div>
 										<div class="user_rating">
@@ -352,33 +374,11 @@
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 									</div>
 								</div>
-
-								<!-- User Review -->
-
-								<div class="user_review_container d-flex flex-column flex-sm-row">
-									<div class="user">
-										<div class="user_pic"></div>
-										<div class="user_rating">
-											<ul class="star_rating">
-												<li><i class="fa fa-star" aria-hidden="true"></i></li>
-												<li><i class="fa fa-star" aria-hidden="true"></i></li>
-												<li><i class="fa fa-star" aria-hidden="true"></i></li>
-												<li><i class="fa fa-star" aria-hidden="true"></i></li>
-												<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-											</ul>
-										</div>
-									</div>
-									<div class="review">
-										<div class="review_date">27 Aug 2016</div>
-										<div class="user_name">Brandon William</div>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</div>
-								</div>
-							</div>
+							</div> -->
 
 							<!-- Add Review -->
 
-							<div class="col-lg-6 add_review_col">
+							<!-- <div class="col-lg-6 add_review_col">
 
 								<div class="add_review">
 									<form id="review_form" action="post">
@@ -413,11 +413,11 @@
 			</div>
 		</div>
 
-	</div>
+	</div> --> -->
 
 	<!-- Benefit -->
 
-	<div class="benefit">
+	<!-- <div class="benefit">
 		<div class="container">
 			<div class="row benefit_row">
 				<div class="col-lg-3 benefit_col">
@@ -458,11 +458,11 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- Newsletter -->
 
-	<div class="newsletter">
+	<!-- <div class="newsletter">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
@@ -481,11 +481,11 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- Footer -->
 
-	<footer class="footer">
+	<!-- <footer class="footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
@@ -517,9 +517,9 @@
 				</div>
 			</div>
 		</div>
-	</footer>
+	</footer> -->
 
-</div>
+<!-- </div>
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
@@ -531,4 +531,4 @@
 <script src="js/single_custom.js"></script>
 </body>
 
-</html>
+</html> --> -->

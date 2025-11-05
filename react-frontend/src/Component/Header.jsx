@@ -1,7 +1,7 @@
 import React from "react";
-import { Link} from "react-router-dom";
-export const Header = ({ cartItems}) => {
-  
+import { Link } from "react-router-dom";
+export const Header = ({ cartItems }) => {
+
   return (
     <>
       <header className="header trans_300">
@@ -101,19 +101,10 @@ export const Header = ({ cartItems}) => {
                       <Link to="/">home</Link>
                     </li>
                     <li>
-                     <a href="#">shop</a>
+                      <a href="#blog">blog</a>
                     </li>
                     <li>
-                      <a href="#">promotion</a>
-                    </li>
-                    <li>
-                      <a href="#">pages</a>
-                    </li>
-                    <li>
-                      <a href="#">blog</a>
-                    </li>
-                    <li>
-                      <a href="contact.html">contact</a>
+                      <Link to="/contact">contact</Link>
                     </li>
                   </ul>
                   <ul className="navbar_user">
@@ -137,7 +128,7 @@ export const Header = ({ cartItems}) => {
                           {(cartItems || []).length}
                         </span>
                       </Link>
-                      
+
                     </li>
                   </ul>
                   <div className="hamburger_container">
@@ -225,9 +216,7 @@ export const Header = ({ cartItems}) => {
             <li className="menu_item">
               <a href="#">promotion</a>
             </li>
-            <li className="menu_item">
-              <a href="#">pages</a>
-            </li>
+
             <li className="menu_item">
               <a href="#">blog</a>
             </li>

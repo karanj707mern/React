@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Home } from './Component/Home'
 import { Cart } from './PagesComponents/Cart'
+import {Contact} from "./PagesComponents/Contact"
 // import {Categories} from "./PagesComponents/Categories"
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import { useState, useEffect } from 'react'
@@ -24,7 +25,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home cartItems={cartItems} updateCart={updateCart} />} />
         <Route path="/Cart" element={<Cart cartItems={cartItems} updateCart={updateCart} />} />
-       
+       <Route path="/Contact" element={<Contact/>} />
         
              </Routes>
     </BrowserRouter>

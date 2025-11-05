@@ -139,6 +139,7 @@ h1, h2, h3, h4, h5, h6
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
+
 h1::selection,
 h2::selection,
 h3::selection,
@@ -212,22 +213,6 @@ section
 .float_right
 {
 	float: right;
-}
-.trans_200
-{
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.trans_300
-{
-	-webkit-transition: all 300ms ease;
-	-moz-transition: all 300ms ease;
-	-ms-transition: all 300ms ease;
-	-o-transition: all 300ms ease;
-	transition: all 300ms ease;
 }
 .trans_400
 {
@@ -834,6 +819,7 @@ section
 }
 .main_slider_content h6
 {
+    position: relative; /* ensure absolute children (bubbles, favorite, add button) position relative to this */
 	font-weight: 500;
 	text-transform: uppercase;
 	margin-bottom: 29px;
@@ -1010,6 +996,7 @@ section
 	width: 20%;
 	height: 380px;
 	cursor: pointer;
+	position: relative;
 }
 .product-item::after
 {
@@ -1075,7 +1062,7 @@ section
 	width: 100%;
 	height: 100%;
 	object-fit: cover; /* preserve aspect ratio and fill the box */
-	display: block; /* remove inline-gap */
+	display: flex; /* remove inline-gap */
 }
 .product_name:hover a
 {
@@ -1162,9 +1149,18 @@ section
 }
 .add_to_cart_button
 {
-	width: 100%;
+	/* Grid/product card styling: overlay the button on the product card */
+	position: absolute;
+	left: 12px;
+	right: 12px;
+	bottom: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
 	visibility: hidden;
 	opacity: 0;
+	z-index: 6;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	-ms-transition: all 0.3s ease;

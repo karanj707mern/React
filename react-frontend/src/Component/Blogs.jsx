@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Blogs = () => {
   return (
-   <div className="blogs">
+   <div className="blogs"id='blog'>
 		<div className="container">
 			<div className="row">
 				<div className="col text-center">

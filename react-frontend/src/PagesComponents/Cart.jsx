@@ -2,6 +2,7 @@
 import React, { useEffect,useState } from 'react'
 import { Header } from '../Component/Header';
 import { Link } from 'react-router-dom';
+import { Contact } from './Contact';
 
 
 
@@ -53,6 +54,7 @@ const total = subtotal + shipping + tax;
   return (
     <>
       <Header cartItems={cartItems} updateCart={updateCart} />
+    
       <div className="container py-5">
         <h1 className="mb-5">Your Shopping Cart</h1>
         <div className="row">
