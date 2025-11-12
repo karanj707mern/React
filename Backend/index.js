@@ -9,12 +9,13 @@ var app = express();
 const path = require('path')
  var catRoutes = require('./Routes/catRoutes')
  var prRoutes = require("./Routes/prRoutes")
+ var userRoutes= require("../Backend/Routes/userRoutes")
 app.use(express.json())
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use('/category/',catRoutes)
 app.use('/product/',prRoutes)
-
+app.use("/user",userRoutes)
 app.use('/public', express.static(path.join(__dirname, 'public')))
 
 app.listen(5000,()=>{

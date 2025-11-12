@@ -1,39 +1,58 @@
 const userModel = require("../Model/userModel")
 require("dotenv").config();
 const bcrypt = require("bcrypt")
+const jwt = require("jsonwebtoken");
+const secret = process.env.Jwt_secret;
 
-export const Register = async(req,res) =>{
-    const {username,email,password}= req.body;
+const Register = async (req, res) => {
+    const { email, password } = req.body;
     try {
-        const ExistingUser = await userModel.findOne({email:email})
-    if(ExistingUser){
-        return res.status(400).json({message:"User already exists"})
-    }
-    }
-    catch(err) {
-        res.status(500).json({message:"Something went wrong"})
-    }
-    finally{
-        const hashedpassword = await bcrypt.hash(password,10);
-        const newUser = new userModel({username,email,password:hashedpassword});
-        console.log("hash:", hashedpassword)
-        await newUser.save();
-        res.status(201).json({message:"User registered successfully"})
-    }
-}
-
-export const login = async(req,res) => {
-    const {email,password} = req.body;
-    try {
-        const ExistingUser = await userModel.find({email:req.body.email});
-        if(!ExistingUser){
-            return res.status(404).json({message:"User not found"})
+        const existingUser = await userModel.findOne({ email: email })
+        if (existingUser) {
+            return res.status(400).json({ message: "User already exists" })
         }
-        if(ExistingUser){
-            data = ExistingUser[0];
-           const truepassword = await bcrypt.compare(password,data.password);
-           if(!truepassword){
-            return res.status(400).json({message:"Pas"})
-           }
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const newUser = new userModel({ email, password: hashedPassword });
+        await newUser.save();
+        return res.status(201).json({ message: "User registered successfully" })
     }
+    catch (err) {
+        console.error(err);
+        return res.status(500).json({ message: "Something went wrong" })
+    }
+
 }
+
+const Login = async (req, res) => {
+    const { email, password } = req.body;
+    try {
+
+        const existingUser = await userModel.findOne({ email});
+        if (!existingUser) {
+            return res.status(404).json({ message: "User not found,Please Register first" })
+        }
+        if (existingUser) {
+
+            const truepassword = await bcrypt.compare(password, existingUser.password);
+            if (!truepassword) {
+                return res.status(400).json({ message: "Invalid Password " })
+            }
+        }
+        const token = jwt.sign({ email: existingUser.email, id: existingUser._id || existingUser.id }, secret, { expiresIn: "1h" });
+        return res.status(200).json({
+            message: "Login Successful",
+            user: existingUser,
+            token: token
+        })
+
+    }
+    catch (err) {
+        return res.status(500).json({ message: "Something went wrong" })
+    }
+
+
+
+}
+
+
+module.exports = { Register, Login };

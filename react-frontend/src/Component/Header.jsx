@@ -1,6 +1,25 @@
-import React from "react";
+import React, {useState,useEffect}from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 export const Header = ({ cartItems }) => {
+
+   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
+
+ 
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    setUser(null);
+    navigate("/Login");
+  };
 
   return (
     <>
@@ -63,19 +82,20 @@ export const Header = ({ cartItems }) => {
                       </a>
                       <ul className="account_selection">
                         <li>
-                          <a href="#">
+                          <Link to ="/Login">
                             <i className="fa fa-sign-in" aria-hidden="true"></i>
                             Sign In
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
+                         <Link
+                          to="/Register">
                             <i
                               className="fa fa-user-plus"
                               aria-hidden="true"
                             ></i>
                             Register
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </li>
