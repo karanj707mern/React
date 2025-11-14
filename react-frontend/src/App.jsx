@@ -6,7 +6,7 @@ import { Contact } from "./PagesComponents/Contact"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Register } from './PagesComponents/Register'
-// import { Login } from './PagesComponents/Login'
+import { Login } from './PagesComponents/Login'
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
@@ -28,7 +28,7 @@ function App() {
           <Route path="/Cart" element={<Cart cartItems={cartItems} updateCart={updateCart} />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Register" element={<Register />} />
-          {/* <Route path="/Login" element={<Login />} /> */}
+          <Route path="/Login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </>

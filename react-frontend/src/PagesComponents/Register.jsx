@@ -25,20 +25,20 @@ export const Register = () => {
       className="d-flex justify-content-center align-items-center"
       style={{
         minHeight: "100vh",
-        backgroundColor: "#e0f7faff", // light cyan background for the whole page
+        backgroundColor: "#e0f7faff", 
       }}
     >
       <div
         className="p-4 rounded shadow-lg"
         style={{
-          backgroundColor: "#72d8e6ff", // cyan box background
-          width: "400px", // box width
+          backgroundColor: "#72d8e6ff", 
+          width: "400px", 
         }}
       >
         <h3 className="text-center mb-4">Register</h3>
 
         <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="formGroupEmail">
+          <Form.Group className="mb-3" controlId="Email">
             <Form.Label>Email address</Form.Label>
             <Form.Control
               type="email"
@@ -49,7 +49,7 @@ export const Register = () => {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formGroupPassword">
+          <Form.Group className="mb-3" controlId="Password">
             <Form.Label>Password</Form.Label>
             <Form.Control
               type="password"

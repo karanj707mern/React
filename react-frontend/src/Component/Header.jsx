@@ -84,7 +84,7 @@ export const Header = ({ cartItems }) => {
                         <li>
                           <Link to ="/Login">
                             <i className="fa fa-sign-in" aria-hidden="true"></i>
-                            Sign In
+                            Log In
                           </Link>
                         </li>
                         <li>
