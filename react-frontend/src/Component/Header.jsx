@@ -18,6 +18,7 @@ export const Header = ({ cartItems }) => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
     localStorage.removeItem("userRole");
+    localStorage.removeItem("refreshToken");
     setUser(null);
     navigate("/");
   };

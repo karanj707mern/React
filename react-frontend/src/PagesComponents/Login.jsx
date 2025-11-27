@@ -23,6 +23,7 @@ export const Login = () => {
             localStorage.setItem("token", res.data.accessToken); // note: use accessToken as your backend sends it
             localStorage.setItem("user", JSON.stringify(res.data.user));
             localStorage.setItem("userRole", res.data.user.role);
+            //  localStorage.setItem("refreshToken", res.data.refreshToken);
 
 
 

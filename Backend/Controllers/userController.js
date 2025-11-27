@@ -68,8 +68,9 @@ const Login = async (req, res) => {
         const refreshToken = jwt.sign({ id: existingUser._id || existingUser.id }, refreshSecret, { expiresIn: '30d' });
         // ensure array exists
         existingUser.refreshTokens = existingUser.refreshTokens || [];
-        existingUser.refreshTokens.push(refreshToken);
+        existingUser.refreshTokens = [refreshToken];
         await existingUser.save();
+
 
         // send refresh token as httpOnly cookie (recommended)
         const cookieOptions = {
@@ -167,14 +168,14 @@ const changeUserRole = async (req, res) => {
         }
         const user = await userModel.findById(id);
         if (!user) return res.status(404).json({ message: 'User not found' });
-        
+
         user.role = role;
         await user.save();
-        
+
         const userSafe = user.toObject ? user.toObject() : user;
         if (userSafe.password) delete userSafe.password;
         if (userSafe.refreshTokens) delete userSafe.refreshTokens;
-        
+
         return res.json({ message: 'User role updated', user: userSafe });
     } catch (err) {
         console.error(err);
