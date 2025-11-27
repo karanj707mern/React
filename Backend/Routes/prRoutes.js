@@ -16,15 +16,18 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage })
 
+
 const {ins,upd,edit,disp,del} = require('../controllers/prController')
-
-
-router.get("/", disp)
-router.post("/add", upload.single('primage'), ins)
-router.put("/upd/:id", upload.single('primage'), upd)
-
+const auth = require('../middleware/auth')
+// User Routes
+router.get("/", disp) // Admin + User
+ //Admins Routes
+router.post("/add", auth('admin'), upload.single('primage'), ins)
+router.put("/upd/:id", auth('admin'), upload.single('primage'), upd)
 router.get("/edit/:id", edit)
-router.delete("/del/:id", del)
+router.delete("/del/:id", auth('admin'), del)
+
+
 
 
 module.exports = router

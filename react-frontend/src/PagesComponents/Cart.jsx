@@ -55,14 +55,16 @@ const total = subtotal + shipping + tax;
     <>
       <Header cartItems={cartItems} updateCart={updateCart} />
     
-      <div className="container py-5">
-        <h1 className="mb-5">Your Shopping Cart</h1>
+      <div className="container py-5" >
+        <h1 className=" mt-5 d-flex justify-content-between">Your Shopping Cart</h1>
         <div className="row">
-        <div className="col-lg-8">
+        <div className="col-lg-8 d-flex flex-column justify-content-center">
 
             {cartItems.length === 0 ? (
-              <p>Cart is Empty..</p>
+              
+              <p style={{fontWeight:600,margin:20,padding:20,outline:"inset",textAlign:"center",backgroundColor:"#cfcfaeff",color:"#6d4103ff",borderRadius:"5px"}}>Cart is Empty..</p>
             ): 
+            
               cartItems.map((item)=>(
                 <div key={item.id || item._id || item.prname}className="card mb-4">
                 <div className="card-body">
@@ -76,7 +78,7 @@ const total = subtotal + shipping + tax;
                         </div>
                         <div className="col-md-2">
                             <div className="input-group">
-                <button onClick={()=>decrementQuantity(item.id || item._id)} className="btn btn-outline-secondary btn-sm" type="button">-</button>
+                <button onClick={()=>decrementQuantity(item.id || item._id)} className="btn btn-outline-secondary d-flex btn-sm" type="button">-</button>
                 <input
                   style={{ maxWidth: 100 }}
                   type="number"
@@ -86,7 +88,7 @@ const total = subtotal + shipping + tax;
                   className="form-control form-control-sm text-center quantity-input"
                   value={item.quantity}
                 />
-                <button onClick={()=>incrementQuantity(item.id || item._id)} className="btn btn-outline-secondary btn-sm" type="button">+</button>
+                <button onClick={()=>incrementQuantity(item.id || item._id)} className="btn btn-outline-secondary btn-lg d-flex" type="button">+</button>
                             </div>
                         </div>
                         <div className="col-md-2 text-end">
@@ -105,7 +107,7 @@ const total = subtotal + shipping + tax;
             <div className="text-start mb-4">
               <Link to="/">
                 <button className="btn btn-outline-primary">
-                    <i className="bi bi-arrow-left me-2"></i>Continue Shopping
+                    <i className="bi bi-arrow-left"></i>Continue Shopping
                 </button>
               </Link>
             </div>

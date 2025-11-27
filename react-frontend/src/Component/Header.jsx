@@ -1,12 +1,12 @@
-import React, {useState,useEffect}from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 export const Header = ({ cartItems }) => {
 
-   const [user, setUser] = useState(null);
+  const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
- 
+
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
@@ -17,8 +17,9 @@ export const Header = ({ cartItems }) => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
+    localStorage.removeItem("userRole");
     setUser(null);
-    navigate("/Login");
+    navigate("/");
   };
 
   return (
@@ -77,27 +78,43 @@ export const Header = ({ cartItems }) => {
                     </li>
                     <li className="account">
                       <a href="#">
-                        My Account
+                        {user ? user.email : "My Account"}
                         <i className="fa fa-angle-down"></i>
                       </a>
                       <ul className="account_selection">
-                        <li>
-                          <Link to ="/Login">
-                            <i className="fa fa-sign-in" aria-hidden="true"></i>
-                            Log In
-                          </Link>
-                        </li>
-                        <li>
-                         <Link
-                          to="/Register">
-                            <i
-                              className="fa fa-user-plus"
-                              aria-hidden="true"
-                            ></i>
-                            Register
-                          </Link>
-                        </li>
+                        {!user ? (
+                          <>
+                            <li>
+                              <Link to="/Login">
+                                <i className="fa fa-sign-in" aria-hidden="true"></i> Log In
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="/Register">
+                                <i className="fa fa-user-plus" aria-hidden="true"></i> Register
+                              </Link>
+                            </li>
+                          </>
+                        ) : (
+                          <>
+                            {user.role === "admin" && (
+                              <li>
+                                <Link to="/adminpanel">
+                                  <i className="fa fa-shield" aria-hidden="true"></i> Admin Panel
+                                </Link>
+                              </li>
+                            )}
+
+                            <li>
+                              <span style={{ cursor: "pointer" }} onClick={handleLogout}>
+                                <i className="fa fa-sign-out" aria-hidden="true"></i> Logout
+                              </span>
+                            </li>
+                          </>
+                        )})
                       </ul>
+
+
                     </li>
                   </ul>
                 </div>

@@ -15,7 +15,7 @@ export const handleAddToCart = (e, product) => {
 					try {
 						window.dispatchEvent(new CustomEvent('cartUpdated', { detail: existing }));
 					} catch (e) {
-						// older browsers or strict CSP may block CustomEvent; ignore failure
+						
 					}
 			} else {
 				const newItem = {

@@ -22,7 +22,7 @@ const ins = async(req,res)=>{
 const upd = async(req,res)=>{
     let id = req.params.id
     try{
-        // return the updated document with { new: true }
+      
         let ans = await CatModel.findByIdAndUpdate(id, req.body, { new: true })
         if(ans){
             return res.json({

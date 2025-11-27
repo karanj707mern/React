@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Register } from './PagesComponents/Register'
 import { Login } from './PagesComponents/Login'
+import AdminPanel from './Component/AdminPanel'
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/adminpanel" element={<AdminPanel />} />
         </Routes>
       </BrowserRouter>
     </>

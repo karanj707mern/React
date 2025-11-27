@@ -20,8 +20,10 @@ export const Login = () => {
             alert(res.data.message);
 
 
-            localStorage.setItem("token", res.data.token);
+            localStorage.setItem("token", res.data.accessToken); // note: use accessToken as your backend sends it
             localStorage.setItem("user", JSON.stringify(res.data.user));
+            localStorage.setItem("userRole", res.data.user.role);
+
 
 
             navigate("/");
