@@ -126,9 +126,10 @@ const Newarrivals = ({ updateCart }) => {
                         </div>
                         <div className="product_info">
                           <h6 className="product_name"><a href="single.html">{i.prname}</a></h6>
-                          <div className="product_price">${i.prprice}</div>
+                         
                         </div>
                       </div>
+                       <div className="product_price">${i.prprice}</div>
                       <div className="red_button add_to_cart_button">
                         <a href="#" onClick={(e) => addToCart(e, i)}>add to cart</a>
                       </div>
