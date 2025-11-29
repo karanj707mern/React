@@ -11,7 +11,10 @@ const path = require('path')
  var prRoutes = require("./Routes/prRoutes")
  var userRoutes= require("../Backend/Routes/userRoutes")
 app.use(express.json())
-app.use(cors());
+app.use(cors({
+  origin: "https://react-node-e-commerce.vercel.app",
+  credentials: true
+}));
 app.use(express.urlencoded({ extended: true }));
 app.use('/category/',catRoutes)
 app.use('/product/',prRoutes)
