@@ -2,10 +2,7 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 const secret = process.env.JWT_SECRET;
 
-// Usage:
-// - For public route: don't use middleware.
-// - For authenticated route (any role): use `auth()`.
-// - For role-restricted route: use `auth('admin')` or `auth(['admin','editor'])`.
+
 module.exports = function(requiredRole) {
   return (req, res, next) => {
     const authHeader = req.headers.authorization;

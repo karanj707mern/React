@@ -3,8 +3,7 @@ require("dotenv").config();
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken");
 const secret = process.env.JWT_SECRET;
-const refreshSecret = process.env.REFRESH_SECRET || process.env.JWT_SECRET; // fallback if REFRESH_SECRET not set
-
+const refreshSecret = process.env.REFRESH_SECRET || process.env.JWT_SECRET; 
 // helper to read cookie without cookie-parser
 function getCookie(req, name) {
     const header = req.headers && req.headers.cookie;
@@ -61,7 +60,7 @@ const Login = async (req, res) => {
                 return res.status(400).json({ message: "Invalid Password " })
             }
         }
-        // create access token (short-lived)
+     
         const accessToken = jwt.sign({ email: existingUser.email, id: existingUser._id || existingUser.id, role: existingUser.role }, secret, { expiresIn: "1h" });
 
         // create refresh token (long-lived) and persist it
@@ -101,7 +100,7 @@ const Login = async (req, res) => {
 
 
 
-// Refresh token endpoint
+
 const refreshTokenHandler = async (req, res) => {
     try {
         // read token from cookie or body
