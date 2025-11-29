@@ -15,6 +15,9 @@ app.use(cors({
   origin: "https://react-node-e-commerce.vercel.app",
   credentials: true
 }));
+app.get('/', (req, res) => {
+  res.send('Backend is running');
+});
 app.use(express.urlencoded({ extended: true }));
 app.use('/category/',catRoutes)
 app.use('/product/',prRoutes)
