@@ -8,4 +8,4 @@
 
                                         **Functionality**
                                         
-  **Interactive Ui** and **GridSorting with isotops**,**AddToCart**,**AdminPanel**,**Token Based securiy by Authentication & Authorization**,
+  **Interactive Ui** ,**AddToCart**,**AdminPanel**,**Role-based Access**,**Authentication & Authorization BY JWT**,**bcryptjs(Hashing algorithm)** 
