@@ -21,6 +21,5 @@ app.use('/product/',prRoutes)
 app.use("/user",userRoutes)
 app.use('/public', express.static(path.join(__dirname, 'public')))
 
-app.listen(5000,()=>{
-    console.log('listening on 5000 port'); 
-})
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
