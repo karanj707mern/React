@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+const API_URL = process.env.REACT_APP_API_URL;
 const Newarrivals = ({ updateCart }) => {
   let [allpr, setAllPr] = useState([]);
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/category/")
+    axios.get(`${API_URL}/category/`)
       .then(res => setAllPr(res.data.data));
-    axios.get("http://localhost:5000/product/")
+    axios.get(`${API_URL}/product/`)
       .then(res => setProducts(res.data.data));
   }, []);
 
@@ -59,7 +59,7 @@ const Newarrivals = ({ updateCart }) => {
       } else {
         const newItem = {
           id: pid,
-          primage: product?.primage || `http://localhost:5000/public/uploads/${product?.primage}`,
+          primage: product?.primage || `${API_URL}/public/uploads/${product?.primage}`,
           name: product?.prname || 'unknown',
           price: product?.prprice || null,
           quantity: 1
@@ -118,7 +118,7 @@ const Newarrivals = ({ updateCart }) => {
                     <div key={i._id || i.prname} className={`product-item ${catClass}`}>
                       <div className="product discount product_filter">
                         <div className="product_image">
-                          <img src={`http://localhost:5000/public/uploads/${i.primage}`} alt={i.prname} />
+                          <img src={`${API_URL}/public/uploads/${i.primage}`} alt={i.prname} />
                         </div>
                         <i className="favorite favorite_left fa fa-heart-o" aria-hidden="true"></i>
                         <div className="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center">

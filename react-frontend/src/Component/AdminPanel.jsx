@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../Styles/AdminPanel.css';
+const API_URL = process.env.REACT_APP_API_URL;
 
 const AdminPanel = () => {
   const [users, setUsers] = useState([]);
@@ -22,7 +23,7 @@ const AdminPanel = () => {
     setLoading(true);
     setError('');
     try {
-      const response = await fetch('http://localhost:5000/user/all', {
+      const response = await fetch(`${API_URL}/user/all`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -47,7 +48,7 @@ const AdminPanel = () => {
     setError('');
     setSuccess('');
     try {
-      const response = await fetch(`http://localhost:5000/user/${userId}/role`, {
+      const response = await fetch(`${API_URL}/user/${userId}/role`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

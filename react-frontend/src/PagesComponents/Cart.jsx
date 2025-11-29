@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom';
 import { faFaceFrown } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 library.add(faFaceFrown);
-
+const API_URL = process.env.REACT_APP_API_URL;
 
 
 export const Cart = ({ cartItems, updateCart }) => {
@@ -75,7 +74,7 @@ export const Cart = ({ cartItems, updateCart }) => {
                   <div className="card-body">
                     <div className="row cart-item mb-3">
                       <div className="col-md-3">
-                        <img src={`http://localhost:5000/public/uploads/${item.primage}`} alt={item.name} className="img-fluid rounded" />
+                        <img src={`${API_URL}/public/uploads/${item.primage}`} alt={item.name} className="img-fluid rounded" />
                       </div>
                       <div className="col-md-5">
                         <h5 className="card-title">{item.name}</h5>

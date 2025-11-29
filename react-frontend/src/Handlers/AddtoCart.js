@@ -1,5 +1,5 @@
 import React from 'react'
-
+const API_URL = process.env.REACT_APP_API_URL;
 export const handleAddToCart = (e, product) => {
   e.preventDefault();
   try {
@@ -20,7 +20,7 @@ export const handleAddToCart = (e, product) => {
 			} else {
 				const newItem = {
 					id: pid,
-					primage: product?.primage || `http://localhost:5000/public/uploads/${product?.primage}`,
+					primage: product?.primage || `${API_URL}/public/uploads/${product?.primage}`,
 					name: product?.prname || 'unknown',
 					price: product?.prprice || null,
 					quantity: 1
