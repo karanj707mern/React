@@ -1,4 +1,4 @@
-var {disp,ins,upd,edit}  = require("../controllers/catcontroller")
+var {disp,ins,upd,edit}  = require("../controllers/catController")
 var express = require('express')
 var router = express.Router()
 const auth = require('../middleware/auth')
