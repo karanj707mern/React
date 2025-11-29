@@ -112,7 +112,7 @@ export const Header = ({ cartItems }) => {
                               </span>
                             </li>
                           </>
-                        )})
+                        )}
                       </ul>
 
 
