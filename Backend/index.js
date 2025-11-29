@@ -12,12 +12,9 @@ const path = require('path')
  var userRoutes= require("../Backend/Routes/userRoutes")
 app.use(express.json())
 app.use(cors({
-  origin: "https://react-node-e-commerce.vercel.app",
+  origin: "https://react-node-e-commerce.vercel.app"|| 'http://localhost:5173',
   credentials: true
 }));
-app.get('/', (req, res) => {
-  res.send('Backend is running');
-});
 app.use(express.urlencoded({ extended: true }));
 app.use('/category/',catRoutes)
 app.use('/product/',prRoutes)
