@@ -5,7 +5,7 @@ import { faFaceFrown } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 library.add(faFaceFrown);
-const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 
 
 export const Cart = ({ cartItems, updateCart }) => {
