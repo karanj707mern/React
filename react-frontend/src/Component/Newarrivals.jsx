@@ -125,7 +125,7 @@ const Newarrivals = ({ updateCart }) => {
                           <span>-${i.discount}</span>
                         </div>
                         <div className="product_info">
-                          <h6 className="product_name"><a href="single.html">{i.prname}</a></h6>
+                          <h6 className="product_name">{i.prname}</h6>
                          
                         </div>
                       </div>
